@@ -24,7 +24,7 @@ const BlurImageLoader = ({ imageUrl }) => {
         const interval = setInterval(() => {
           setLoadingProgress((prevProgress) => {
             const newProgress = prevProgress + 5;
-            if (newProgress >= 95) {
+            if (newProgress >= 100) {
               clearInterval(interval);
             }
             return newProgress;
