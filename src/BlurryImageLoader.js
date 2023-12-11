@@ -23,7 +23,7 @@ const BlurImageLoader = ({ imageUrl }) => {
       img.onload = () => {
         const interval = setInterval(() => {
           setLoadingProgress((prevProgress) => {
-            const newProgress = prevProgress + 5;
+            const newProgress = prevProgress + 10;
             if (newProgress >= 90) {
               clearInterval(interval);
             }
@@ -50,7 +50,7 @@ const BlurImageLoader = ({ imageUrl }) => {
           // display: 'flex',
           textAlign: 'center',
           zIndex: '1',
-          display: loadingProgress === 100 ? 'none' : 'block',
+          display: loadingProgress >= 100 ? 'none' : 'block',
           }
           }>Loading: {loadingProgress}%</p>
       <div
